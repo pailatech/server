@@ -74,7 +74,11 @@ class CommonService
         }
 
         return $this->baseEloquentBuilder($model, $where, $with, $select)->get();
+    }
 
+    public function delete($entity, $entityId)
+    {
+        return $this->baseEloquentBuilder($entity, ['id' => $entityId])->delete();
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Branch;
 use App\Collapsible;
 use App\Food;
@@ -12,9 +11,16 @@ use Illuminate\Http\Request;
 
 class CommonController
 {
-    public function index(string $entity, CommonService $commonService)
+    private $commonService;
+
+    public function __construct(CommonService $commonService)
     {
-        return $commonService->get($this->getModel($entity));
+        $this->commonService = $commonService;
+    }
+
+    public function index(string $entity)
+    {
+        return $this->commonService->get($this->getModel($entity));
     }
 
     private function getModel($entity)
@@ -29,8 +35,18 @@ class CommonController
         return $modelResolver[$entity];
     }
 
-    public function store(string $entity, Request $request, CommonService $commonService)
+    public function store(string $entity, Request $request)
     {
-        return $commonService->save($request->except('db_id'), $this->getModel($entity));
+        return $this->commonService->save($request->except('db_id'), $this->getModel($entity));
+    }
+
+    public function update(string $entity, int $entityId, Request $request)
+    {
+        return $this->commonService->save($request->except('db_id'), $this->getModel($entity), $entityId);
+    }
+
+    public function delete(string $entity, $entityId)
+    {
+        return $this->commonService->delete($this->getModel($entity), $entityId);
     }
 }

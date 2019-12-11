@@ -59,5 +59,7 @@ $router->get('/test', function() {
 
 $router->group(['middleware' => \App\Http\Middleware\ConnectUserDatabase::class], function () use ($router) {
     $router->get('{entity}', CommonController::class . '@index');
+    $router->patch('{entity}/{entityId}', CommonController::class . '@update');
     $router->post('{entity}', CommonController::class . '@store');
+    $router->delete('{entity}/{entityId}', CommonController::class . '@delete');
 });
