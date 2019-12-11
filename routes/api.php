@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,16 +11,44 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group([
+/* @var \Illuminate\Routing\Router $router */
+$router = resolve(\Illuminate\Routing\Router::class);
+
+
+\Illuminate\Support\Facades\Route::group([
     'prefix' => 'auth'
 ], function () {
     Route::post('login', 'AuthController@login');
-    Route::post('signup', 'AuthController@signup');
+    Route::post('signup', 'AuthController@signUp');
 
     Route::group([
         'middleware' => 'auth:api'
-    ], function() {
+    ], function () {
         Route::get('logout', 'AuthController@logout');
         Route::get('user', 'AuthController@user');
     });
+});
+
+$router->get('delete-all-tenant-db', function () {
+    $playgroundDatabases = \Illuminate\Support\Facades\DB::select('SHOW DATABASES LIKE \'%playground%\'');
+
+    /* @var \Illuminate\Database\Schema\Builder $builder */
+    $builder = resolve(\Illuminate\Database\Schema\Builder::class);
+
+    if (count($playgroundDatabases)) {
+        foreach ($playgroundDatabases as $index => $databaseObject) {
+            $databaseName = get_object_vars($databaseObject)["Database (%playground%)"];
+            $builder->getConnection()->getDoctrineSchemaManager()->dropDatabase($databaseName);
+
+            echo "Database deleted: {$databaseName}";
+        }
+        echo "<p>Done!";
+    } else {
+        echo 'No playground databases found.';
+    }
+
+
+    \Illuminate\Support\Facades\Artisan::call('migrate:fresh');
+
+    echo "<p>Performed";
 });
