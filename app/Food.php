@@ -2,9 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Food extends Model
+class Food extends CommonModel
 {
-    protected $guarded = [];
+
 }

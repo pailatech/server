@@ -15,7 +15,7 @@ class CreateCollapsiblesTable extends Migration
     {
         Schema::create('collapsibles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('master_tag_id');
+            $table->integer('master_tag_id')->nullable();
             $table->timestamps();
         });
     }

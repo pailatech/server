@@ -5,10 +5,12 @@ use App\Food;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -88,14 +90,18 @@ class AuthController extends Controller
         if ($request->remember_me)
             $token->expires_at = Carbon::now()->addWeeks(1);
         $token->save();
-        $this->setDatabaseConnection(Auth::user()->db_id);
+//        dd(Auth::user()->db_id);
+        $dbId = Auth::user()->db_id;
+        $this->setDatabaseConnection($dbId);
         $this->testCreate();
+
         return response()->json([
             'access_token' => $tokenResult->accessToken,
             'token_type' => 'Bearer',
             'expires_at' => Carbon::parse(
                 $tokenResult->token->expires_at
-            )->toDateTimeString()
+            )->toDateTimeString(),
+            'db_id' => $dbId
         ]);
     }
 

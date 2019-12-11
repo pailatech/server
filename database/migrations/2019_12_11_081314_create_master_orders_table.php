@@ -15,10 +15,10 @@ class CreateMasterOrdersTable extends Migration
     {
         Schema::create('master_orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->integer('customer_id');
-            $table->integer('order_id');
-            $table->integer('branch_id');
+            $table->integer('user_id')->nullable();
+            $table->integer('customer_id')->nullable();
+            $table->integer('order_id')->nullable();
+            $table->integer('branch_id')->nullable();
             $table->timestamps();
         });
     }

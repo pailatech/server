@@ -2,9 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Branch extends Model
+class Branch extends CommonModel
 {
     //
 }

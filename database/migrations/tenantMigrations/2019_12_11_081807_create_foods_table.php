@@ -15,10 +15,10 @@ class CreateFoodsTable extends Migration
     {
         Schema::create('foods', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->float('price');
-            $table->text('description');
-            $table->json('tags');
+            $table->string('name')->nullable();
+            $table->float('price')->nullable();
+            $table->text('description')->nullable();
+            $table->string('tags')->nullable();
             $table->timestamps();
         });
     }

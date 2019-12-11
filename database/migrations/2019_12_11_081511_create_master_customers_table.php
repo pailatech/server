@@ -15,8 +15,8 @@ class CreateMasterCustomersTable extends Migration
     {
         Schema::create('master_customers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

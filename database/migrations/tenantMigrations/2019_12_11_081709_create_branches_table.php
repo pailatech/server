@@ -15,9 +15,9 @@ class CreateBranchesTable extends Migration
     {
         Schema::create('branches', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('location');
-            $table->integer('payment_id');
-            $table->string('email');
+            $table->string('location')->nullable();
+            $table->integer('payment_id')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

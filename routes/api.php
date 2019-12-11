@@ -16,16 +16,16 @@ $router = resolve(\Illuminate\Routing\Router::class);
 
 
 \Illuminate\Support\Facades\Route::group([
-    'prefix' => 'auth'
-], function () {
-    Route::post('login', 'AuthController@login');
-    Route::post('signup', 'AuthController@signUp');
+    'prefix' => 'auth',
+], function () use ($router) {
+    $router->post('login', 'AuthController@login');
+    $router->post('signup', 'AuthController@signUp');
 
-    Route::group([
+    $router->group([
         'middleware' => 'auth:api'
-    ], function () {
-        Route::get('logout', 'AuthController@logout');
-        Route::get('user', 'AuthController@user');
+    ], function () use ($router) {
+        $router->get('logout', 'AuthController@logout');
+        $router->get('user', 'AuthController@user');
     });
 });
 
@@ -55,4 +55,9 @@ $router->get('delete-all-tenant-db', function () {
 
 $router->get('/test', function() {
    return 'here';
+});
+
+$router->group(['middleware' => \App\Http\Middleware\ConnectUserDatabase::class], function () use ($router) {
+    $router->get('{entity}', CommonController::class . '@index');
+    $router->post('{entity}', CommonController::class . '@store');
 });
