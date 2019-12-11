@@ -52,3 +52,7 @@ $router->get('delete-all-tenant-db', function () {
 
     echo "<p>Performed";
 });
+
+$router->get('/test', function() {
+   return 'here';
+});
