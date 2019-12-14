@@ -6,7 +6,6 @@ use Closure;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Session;
 
 class ConnectUserDatabase
 {
@@ -19,7 +18,7 @@ class ConnectUserDatabase
      */
     public function handle($request, Closure $next)
     {
-        $this->setDatabaseConnection($request->query('db_id'));
+        $this->setDatabaseConnection($request->headers->get('databaseName'));
 
         return $next($request);
     }

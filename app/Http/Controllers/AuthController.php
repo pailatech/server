@@ -101,7 +101,7 @@ class AuthController extends Controller
             'expires_at' => Carbon::parse(
                 $tokenResult->token->expires_at
             )->toDateTimeString(),
-            'db_id' => $dbId
+            'databaseName' => $dbId
         ]);
     }
 

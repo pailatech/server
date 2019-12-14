@@ -27,8 +27,8 @@ class CommonController
     {
         $modelResolver = [
             'foods' => resolve(Food::class),
-            'branches' => resolve(Branch::class),
             'orders' => resolve(Order::class),
+            'branches' => resolve(Branch::class),
             'collapsibles' => resolve(Collapsible::class),
         ];
 
@@ -37,12 +37,12 @@ class CommonController
 
     public function store(string $entity, Request $request)
     {
-        return $this->commonService->save($request->except('db_id'), $this->getModel($entity));
+        return $this->commonService->save($request->all(), $this->getModel($entity));
     }
 
     public function update(string $entity, int $entityId, Request $request)
     {
-        return $this->commonService->save($request->except('db_id'), $this->getModel($entity), $entityId);
+        return $this->commonService->save($request->all(), $this->getModel($entity), $entityId);
     }
 
     public function delete(string $entity, $entityId)
