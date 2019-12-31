@@ -6,18 +6,17 @@ use Closure;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
 
 class ConnectUserDatabase
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
-     */
     public function handle($request, Closure $next)
     {
+        throw_if(
+            !$request->headers->has('databaseName'),
+            ValidationException::withMessages(['databaseName' => 'Headers need to have databaseName field.'])
+        );
+
         $this->setDatabaseConnection($request->headers->get('databaseName'));
 
         return $next($request);

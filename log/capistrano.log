@@ -20769,3 +20769,1107 @@ To initialize a project, please create a composer.json file as described in the 
   INFO [73e783d4] Running /usr/bin/env echo "Branch develop (at bd799bbbd529859de5536df13ed031218a93901d) deployed as release 20191213101723 by iw-jay" >> /var/www/server/revisions.log as ubuntu@13.234.82.187
  DEBUG [73e783d4] Command: cd /var/www/server/releases && /usr/bin/env echo "Branch develop (at bd799bbbd529859de5536df13ed031218a93901d) deployed as release 20191213101723 by iw-jay" >> /var/www/server/revisions.log
   INFO [73e783d4] Finished in 0.262 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-12-14 07:30:17 +0545 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a2365cd7] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.234.82.187
+ DEBUG [a2365cd7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a2365cd7] Finished in 3.290 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-test-application.-production-iw-jay.sh 0.0%
+  INFO Uploading /tmp/git-ssh-test-application.-production-iw-jay.sh 100.0%
+  INFO [89bb062e] Running /usr/bin/env chmod 700 /tmp/git-ssh-test-application.-production-iw-jay.sh as ubuntu@13.234.82.187
+ DEBUG [89bb062e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-test-application.-production-iw-jay.sh
+  INFO [89bb062e] Finished in 0.434 seconds with exit status 0 (successful).
+  INFO [3e164aa6] Running /usr/bin/env git ls-remote https://github.com/pailatech/server.git HEAD as ubuntu@13.234.82.187
+ DEBUG [3e164aa6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test-application.-production-iw-jay.sh" ; /usr/bin/env git ls-remote https://github.com/pailatech/server.git HEAD )
+ DEBUG [3e164aa6] 	3f9b67ff3141476addac17ed7b890d284bbf4d07	HEAD
+  INFO [3e164aa6] Finished in 2.061 seconds with exit status 0 (successful).
+  INFO [656b0652] Running /usr/bin/env mkdir -p /var/www/server/shared /var/www/server/releases as ubuntu@13.234.82.187
+ DEBUG [656b0652] Command: /usr/bin/env mkdir -p /var/www/server/shared /var/www/server/releases
+  INFO [656b0652] Finished in 0.429 seconds with exit status 0 (successful).
+  INFO [db810daf] Running /usr/bin/env mkdir -p /var/www/server/shared/storage/app /var/www/server/shared/storage/framework/cache /var/www/server/shared/storage/framework/sessions /var/www/server/shared/storage/framework/views /var/www/server/shared/storage/logs as ubuntu@13.234.82.187
+ DEBUG [db810daf] Command: /usr/bin/env mkdir -p /var/www/server/shared/storage/app /var/www/server/shared/storage/framework/cache /var/www/server/shared/storage/framework/sessions /var/www/server/shared/storage/framework/views /var/www/server/shared/storage/logs
+  INFO [db810daf] Finished in 0.900 seconds with exit status 0 (successful).
+ DEBUG [9c3c2483] Running [ -f /var/www/server/current/REVISION ] as ubuntu@13.234.82.187
+ DEBUG [9c3c2483] Command: [ -f /var/www/server/current/REVISION ]
+ DEBUG [9c3c2483] Finished in 0.486 seconds with exit status 0 (successful).
+ DEBUG [52130bb0] Running /usr/bin/env cat /var/www/server/current/REVISION 2>/dev/null as ubuntu@13.234.82.187
+ DEBUG [52130bb0] Command: /usr/bin/env cat /var/www/server/current/REVISION 2>/dev/null
+ DEBUG [52130bb0] 	bd799bbbd529859de5536df13ed031218a93901d
+ DEBUG [52130bb0] Finished in 0.609 seconds with exit status 0 (successful).
+ DEBUG [ddbf7074] Running [ -f /var/www/server/repo/HEAD ] as ubuntu@13.234.82.187
+ DEBUG [ddbf7074] Command: [ -f /var/www/server/repo/HEAD ]
+ DEBUG [ddbf7074] Finished in 1.598 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/server/repo
+ DEBUG [ef3f109b] Running if test ! -d /var/www/server/repo; then echo "Directory does not exist '/var/www/server/repo'" 1>&2; false; fi as ubuntu@13.234.82.187
+ DEBUG [ef3f109b] Command: if test ! -d /var/www/server/repo; then echo "Directory does not exist '/var/www/server/repo'" 1>&2; false; fi
+ DEBUG [ef3f109b] Finished in 1.131 seconds with exit status 0 (successful).
+  INFO [74518087] Running /usr/bin/env git remote set-url origin https://github.com/pailatech/server.git as ubuntu@13.234.82.187
+ DEBUG [74518087] Command: cd /var/www/server/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test-application.-production-iw-jay.sh" ; /usr/bin/env git remote set-url origin https://github.com/pailatech/server.git )
+  INFO [74518087] Finished in 2.668 seconds with exit status 0 (successful).
+  INFO [90d4ffdd] Running /usr/bin/env git remote update --prune as ubuntu@13.234.82.187
+ DEBUG [90d4ffdd] Command: cd /var/www/server/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test-application.-production-iw-jay.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [90d4ffdd] 	Fetching origin
+ DEBUG [90d4ffdd] 	From https://github.com/pailatech/server
+   bd799bb..19eaafc  develop    -> develop
+  INFO [90d4ffdd] Finished in 2.086 seconds with exit status 0 (successful).
+ DEBUG [b9802b30] Running if test ! -d /var/www/server/repo; then echo "Directory does not exist '/var/www/server/repo'" 1>&2; false; fi as ubuntu@13.234.82.187
+ DEBUG [b9802b30] Command: if test ! -d /var/www/server/repo; then echo "Directory does not exist '/var/www/server/repo'" 1>&2; false; fi
+ DEBUG [b9802b30] Finished in 0.598 seconds with exit status 0 (successful).
+  INFO [a6add616] Running /usr/bin/env mkdir -p /var/www/server/releases/20191214014527 as ubuntu@13.234.82.187
+ DEBUG [a6add616] Command: cd /var/www/server/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test-application.-production-iw-jay.sh" ; /usr/bin/env mkdir -p /var/www/server/releases/20191214014527 )
+  INFO [a6add616] Finished in 1.815 seconds with exit status 0 (successful).
+  INFO [25985818] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /var/www/server/releases/20191214014527 as ubuntu@13.234.82.187
+ DEBUG [25985818] Command: cd /var/www/server/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test-application.-production-iw-jay.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /var/www/server/releases/20191214014527 )
+  INFO [25985818] Finished in 0.898 seconds with exit status 0 (successful).
+ DEBUG [c6f66e63] Running if test ! -d /var/www/server/repo; then echo "Directory does not exist '/var/www/server/repo'" 1>&2; false; fi as ubuntu@13.234.82.187
+ DEBUG [c6f66e63] Command: if test ! -d /var/www/server/repo; then echo "Directory does not exist '/var/www/server/repo'" 1>&2; false; fi
+ DEBUG [c6f66e63] Finished in 0.404 seconds with exit status 0 (successful).
+ DEBUG [05f35e05] Running /usr/bin/env git rev-list --max-count=1 develop as ubuntu@13.234.82.187
+ DEBUG [05f35e05] Command: cd /var/www/server/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test-application.-production-iw-jay.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [05f35e05] 	19eaafcca86213a9cb92a802259740125c899bca
+ DEBUG [05f35e05] Finished in 1.288 seconds with exit status 0 (successful).
+ DEBUG [b5359183] Running if test ! -d /var/www/server/releases/20191214014527; then echo "Directory does not exist '/var/www/server/releases/20191214014527'" 1>&2; false; fi as ubuntu@13.234.82.187
+ DEBUG [b5359183] Command: if test ! -d /var/www/server/releases/20191214014527; then echo "Directory does not exist '/var/www/server/releases/20191214014527'" 1>&2; false; fi
+ DEBUG [b5359183] Finished in 0.871 seconds with exit status 0 (successful).
+  INFO [f03592ca] Running /usr/bin/env echo "19eaafcca86213a9cb92a802259740125c899bca" > REVISION as ubuntu@13.234.82.187
+ DEBUG [f03592ca] Command: cd /var/www/server/releases/20191214014527 && /usr/bin/env echo "19eaafcca86213a9cb92a802259740125c899bca" > REVISION
+  INFO [f03592ca] Finished in 0.252 seconds with exit status 0 (successful).
+  INFO [959a2f37] Running /usr/bin/env mkdir -p /var/www/server/releases/20191214014527/storage /var/www/server/releases/20191214014527/storage/framework as ubuntu@13.234.82.187
+ DEBUG [959a2f37] Command: /usr/bin/env mkdir -p /var/www/server/releases/20191214014527/storage /var/www/server/releases/20191214014527/storage/framework
+  INFO [959a2f37] Finished in 0.960 seconds with exit status 0 (successful).
+ DEBUG [592c21ae] Running [ -L /var/www/server/releases/20191214014527/storage/app ] as ubuntu@13.234.82.187
+ DEBUG [592c21ae] Command: [ -L /var/www/server/releases/20191214014527/storage/app ]
+ DEBUG [592c21ae] Finished in 0.924 seconds with exit status 1 (failed).
+ DEBUG [01c22381] Running [ -d /var/www/server/releases/20191214014527/storage/app ] as ubuntu@13.234.82.187
+ DEBUG [01c22381] Command: [ -d /var/www/server/releases/20191214014527/storage/app ]
+ DEBUG [01c22381] Finished in 0.481 seconds with exit status 0 (successful).
+  INFO [9baab0ef] Running /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/app as ubuntu@13.234.82.187
+ DEBUG [9baab0ef] Command: /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/app
+  INFO [9baab0ef] Finished in 0.549 seconds with exit status 0 (successful).
+  INFO [e68a59c1] Running /usr/bin/env ln -s /var/www/server/shared/storage/app /var/www/server/releases/20191214014527/storage/app as ubuntu@13.234.82.187
+ DEBUG [e68a59c1] Command: /usr/bin/env ln -s /var/www/server/shared/storage/app /var/www/server/releases/20191214014527/storage/app
+  INFO [e68a59c1] Finished in 1.198 seconds with exit status 0 (successful).
+ DEBUG [b32aadec] Running [ -L /var/www/server/releases/20191214014527/storage/framework/cache ] as ubuntu@13.234.82.187
+ DEBUG [b32aadec] Command: [ -L /var/www/server/releases/20191214014527/storage/framework/cache ]
+ DEBUG [b32aadec] Finished in 1.392 seconds with exit status 1 (failed).
+ DEBUG [6150da68] Running [ -d /var/www/server/releases/20191214014527/storage/framework/cache ] as ubuntu@13.234.82.187
+ DEBUG [6150da68] Command: [ -d /var/www/server/releases/20191214014527/storage/framework/cache ]
+ DEBUG [6150da68] Finished in 0.913 seconds with exit status 0 (successful).
+  INFO [bdcbd819] Running /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/framework/cache as ubuntu@13.234.82.187
+ DEBUG [bdcbd819] Command: /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/framework/cache
+  INFO [bdcbd819] Finished in 1.503 seconds with exit status 0 (successful).
+  INFO [61917c04] Running /usr/bin/env ln -s /var/www/server/shared/storage/framework/cache /var/www/server/releases/20191214014527/storage/framework/cache as ubuntu@13.234.82.187
+ DEBUG [61917c04] Command: /usr/bin/env ln -s /var/www/server/shared/storage/framework/cache /var/www/server/releases/20191214014527/storage/framework/cache
+  INFO [61917c04] Finished in 0.444 seconds with exit status 0 (successful).
+ DEBUG [585b6004] Running [ -L /var/www/server/releases/20191214014527/storage/framework/sessions ] as ubuntu@13.234.82.187
+ DEBUG [585b6004] Command: [ -L /var/www/server/releases/20191214014527/storage/framework/sessions ]
+ DEBUG [585b6004] Finished in 0.603 seconds with exit status 1 (failed).
+ DEBUG [d681e8ff] Running [ -d /var/www/server/releases/20191214014527/storage/framework/sessions ] as ubuntu@13.234.82.187
+ DEBUG [d681e8ff] Command: [ -d /var/www/server/releases/20191214014527/storage/framework/sessions ]
+ DEBUG [d681e8ff] Finished in 1.205 seconds with exit status 0 (successful).
+  INFO [4f225ef3] Running /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/framework/sessions as ubuntu@13.234.82.187
+ DEBUG [4f225ef3] Command: /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/framework/sessions
+  INFO [4f225ef3] Finished in 0.723 seconds with exit status 0 (successful).
+  INFO [23dc6af6] Running /usr/bin/env ln -s /var/www/server/shared/storage/framework/sessions /var/www/server/releases/20191214014527/storage/framework/sessions as ubuntu@13.234.82.187
+ DEBUG [23dc6af6] Command: /usr/bin/env ln -s /var/www/server/shared/storage/framework/sessions /var/www/server/releases/20191214014527/storage/framework/sessions
+  INFO [23dc6af6] Finished in 0.728 seconds with exit status 0 (successful).
+ DEBUG [4235f82b] Running [ -L /var/www/server/releases/20191214014527/storage/framework/views ] as ubuntu@13.234.82.187
+ DEBUG [4235f82b] Command: [ -L /var/www/server/releases/20191214014527/storage/framework/views ]
+ DEBUG [4235f82b] Finished in 0.323 seconds with exit status 1 (failed).
+ DEBUG [689bd278] Running [ -d /var/www/server/releases/20191214014527/storage/framework/views ] as ubuntu@13.234.82.187
+ DEBUG [689bd278] Command: [ -d /var/www/server/releases/20191214014527/storage/framework/views ]
+ DEBUG [689bd278] Finished in 1.030 seconds with exit status 0 (successful).
+  INFO [d84df9a1] Running /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/framework/views as ubuntu@13.234.82.187
+ DEBUG [d84df9a1] Command: /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/framework/views
+  INFO [d84df9a1] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [093f7a36] Running /usr/bin/env ln -s /var/www/server/shared/storage/framework/views /var/www/server/releases/20191214014527/storage/framework/views as ubuntu@13.234.82.187
+ DEBUG [093f7a36] Command: /usr/bin/env ln -s /var/www/server/shared/storage/framework/views /var/www/server/releases/20191214014527/storage/framework/views
+  INFO [093f7a36] Finished in 0.983 seconds with exit status 0 (successful).
+ DEBUG [ade75759] Running [ -L /var/www/server/releases/20191214014527/storage/logs ] as ubuntu@13.234.82.187
+ DEBUG [ade75759] Command: [ -L /var/www/server/releases/20191214014527/storage/logs ]
+ DEBUG [ade75759] Finished in 0.305 seconds with exit status 1 (failed).
+ DEBUG [a8ab1172] Running [ -d /var/www/server/releases/20191214014527/storage/logs ] as ubuntu@13.234.82.187
+ DEBUG [a8ab1172] Command: [ -d /var/www/server/releases/20191214014527/storage/logs ]
+ DEBUG [a8ab1172] Finished in 0.305 seconds with exit status 0 (successful).
+  INFO [29e16971] Running /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/logs as ubuntu@13.234.82.187
+ DEBUG [29e16971] Command: /usr/bin/env rm -rf /var/www/server/releases/20191214014527/storage/logs
+  INFO [29e16971] Finished in 0.380 seconds with exit status 0 (successful).
+  INFO [e283e0c1] Running /usr/bin/env ln -s /var/www/server/shared/storage/logs /var/www/server/releases/20191214014527/storage/logs as ubuntu@13.234.82.187
+ DEBUG [e283e0c1] Command: /usr/bin/env ln -s /var/www/server/shared/storage/logs /var/www/server/releases/20191214014527/storage/logs
+  INFO [e283e0c1] Finished in 0.596 seconds with exit status 0 (successful).
+ DEBUG [0759e078] Running if test ! -d /var/www/server/releases/20191214014527; then echo "Directory does not exist '/var/www/server/releases/20191214014527'" 1>&2; false; fi as ubuntu@13.234.82.187
+ DEBUG [0759e078] Command: if test ! -d /var/www/server/releases/20191214014527; then echo "Directory does not exist '/var/www/server/releases/20191214014527'" 1>&2; false; fi
+ DEBUG [0759e078] Finished in 0.365 seconds with exit status 0 (successful).
+  INFO [4e90f680] Running /usr/bin/env composer install -vvv as ubuntu@13.234.82.187
+ DEBUG [4e90f680] Command: cd /var/www/server/releases/20191214014527 && /usr/bin/env composer install -vvv
+ DEBUG [4e90f680] 	Reading ./composer.json
+ DEBUG [4e90f680] 	Loading config file ./composer.json
+ DEBUG [4e90f680] 	Checked CA file /etc/ssl/certs/ca-certificates.crt: valid
+ DEBUG [4e90f680] 	Executing command (/var/www/server/releases/20191214014527): git branch --no-color --no-abbrev -v
+ DEBUG [4e90f680] 	Executing command (/var/www/server/releases/20191214014527): git describe --exact-match --tags
+ DEBUG [4e90f680] 	Executing command (/var/www/server/releases/20191214014527): git log --pretty="%H" -n1 HEAD
+ DEBUG [4e90f680] 	Executing command (/var/www/server/releases/20191214014527): hg branch
+ DEBUG [4e90f680] 	Executing command (/var/www/server/releases/20191214014527): fossil branch list
+ DEBUG [4e90f680] 	Executing command (/var/www/server/releases/20191214014527): fossil tag list
+ DEBUG [4e90f680] 	Executing command (/var/www/server/releases/20191214014527): svn info --xml
+ DEBUG [4e90f680] 	Failed to initialize global composer: Composer could not find the config file: /home/ubuntu/.composer/composer.json
+To initialize a project, please create a composer.json file as described in the https://getcomposer.org/ "Getting Started" section
+ DEBUG [4e90f680] 	Running 1.9.1 (2019-11-01 17:20:17) with PHP 7.2.24-0ubuntu0.18.04.1 on Linux / 4.15.0-1056-aws
+ DEBUG [4e90f680] 	Reading ./composer.lock
+ DEBUG [4e90f680] 	Loading composer repositories with package information
+ DEBUG [4e90f680] 	Installing dependencies (including require-dev) from lock file
+ DEBUG [4e90f680] 	Reading ./composer.lock
+ DEBUG [4e90f680] 	Resolving dependencies through SAT
+ DEBUG [4e90f680] 	Looking at all rules.
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	Dependency resolution completed in 0.001 seconds
+ DEBUG [4e90f680] 	Analyzed 155 packages to resolve dependencies
+ DEBUG [4e90f680] 	Analyzed 450 rules to resolve dependencies
+ DEBUG [4e90f680] 	Package operations: 103 installs, 0 updates, 0 removals
+ DEBUG [4e90f680] 	Installs: doctrine/event-manager:1.1.0, doctrine/cache:1.10.0, doctrine/dbal:v2.10.0, doctrine/inflector:1.3.1, doctrine/lexer:1.2.0, dragonmantank/cron-expression:v2.3.0, erusev/parsedown:1.7.3, symfony/polyfill-ctype:v1.13.1, phpoption/phpoption:1.6.0, vlucas/phpdotenv:v3.6.0, symfony/css-selector:v5.0.1, tijsverkoyen/css-to-inline-styles:2.2.2, symfony/polyfill-php72:v1.13.1, symfony/polyfill-mbstring:v1.13.1, symfony/var-dumper:v4.4.1, symfony/routing:v4.4.1, symfony/process:v4.4.1, symfony/polyfill-php73:v1.13.1, symfony/polyfill-intl-idn:v1.13.1, symfony/mime:v5.0.1, symfony/http-foundation:v4.4.1, symfony/event-dispatcher-contracts:v1.1.7, symfony/event-dispatcher:v4.4.1, psr/log:1.1.2, symfony/debug:v4.4.1, symfony/error-handler:v4.4.1, symfony/http-kernel:v4.4.1, symfony/finder:v4.4.1, psr/container:1.0.0, symfony/service-contracts:v2.0.1, symfony/console:v4.4.1, symfony/polyfill-iconv:v1.13.1, egulias/email-validator:2.1.11, swiftmailer/swiftmailer:v6.2.3, paragonie/random_compat:v9.99.99, ramsey/uuid:3.9.1, psr/simple-cache:1.0.1, opis/closure:3.5.1, symfony/translation-contracts:v2.0.1, symfony/translation:v4.4.1, nesbot/carbon:2.27.0, monolog/monolog:2.0.1, league/flysystem:1.0.57, laravel/framework:v6.6.0, fideloper/proxy:4.2.1, guzzlehttp/promises:v1.3.1, ralouphie/getallheaders:3.0.3, psr/http-message:1.0.1, guzzlehttp/psr7:1.6.1, jakub-onderka/php-console-color:v0.2, psr/http-factory:1.0.1, zendframework/zend-diactoros:2.2.1, symfony/psr-http-message-bridge:v1.3.0, phpseclib/phpseclib:2.0.23, league/event:2.2.0, lcobucci/jwt:3.3.1, defuse/php-encryption:v2.2.1, league/oauth2-server:8.0.0, guzzlehttp/guzzle:6.4.1, firebase/php-jwt:v5.0.0, laravel/passport:v8.0.2, nikic/php-parser:v4.3.0, jakub-onderka/php-console-highlighter:v0.4, dnoegel/php-xdg-base-dir:0.1, psy/psysh:v0.9.11, laravel/tinker:v1.0.10, scrivo/highlight.php:v9.15.10.0, filp/whoops:2.5.0, facade/ignition-contracts:1.0.0, facade/flare-client-php:1.3.0, facade/ignition:1.13.0, fzaninotto/faker:v1.9.0, sebastian/recursion-context:3.0.0, sebastian/exporter:3.1.2, sebastian/diff:3.0.2, sebastian/comparator:3.0.2, hamcrest/hamcrest-php:v2.0.0, mockery/mockery:1.3.0, nunomaduro/collision:v3.0.1, webmozart/assert:1.6.0, phpdocumentor/reflection-common:2.0.0, phpdocumentor/type-resolver:1.0.1, phpdocumentor/reflection-docblock:4.3.2, phpunit/php-token-stream:3.1.1, sebastian/version:2.0.1, sebastian/type:1.1.3, sebastian/resource-operations:2.0.1, sebastian/object-reflector:1.1.1, sebastian/object-enumerator:3.0.3, sebastian/global-state:3.0.0, sebastian/environment:4.2.3, phpunit/php-timer:2.1.2, phpunit/php-text-template:1.2.1, phpunit/php-file-iterator:2.0.2, theseer/tokenizer:1.1.3, sebastian/code-unit-reverse-lookup:1.0.1, phpunit/php-code-coverage:7.0.10, doctrine/instantiator:1.3.0, phpspec/prophecy:1.9.0, phar-io/version:2.0.1, phar-io/manifest:1.0.3, myclabs/deep-copy:1.9.3, phpunit/phpunit:8.4.3
+ DEBUG [4e90f680] 	  - Installing doctrine/event-manager (1.1.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/doctrine/event-manager/a8c5d786e71b00c68b17e4d97714dd5f411feafb.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/doctrine/event-manager/16495403cae888f92917a55acb97bc7a' -d '/var/www/server/releases/20191214014527/vendor/composer/085a0563'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install doctrine/event-manager 1.1.0)
+
+  - Installing doctrine/cache (1.10.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/doctrine/cache/59a4c6dd3f9a8ef5ee18e9eca919e8056f97837a.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/doctrine/cache/63ca155bee9392c2c415ff920f3bd7f9' -d '/var/www/server/releases/20191214014527/vendor/composer/1e0a9e95'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install doctrine/cache 1.10.0)
+
+  - Installing doctrine/dbal (v2.10.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/doctrine/dbal/2a54c129495447a37bff0b1f1ab5e94290b7a67a.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/doctrine/dbal/422c6c17993c7bdd352315f3048aae64' -d '/var/www/server/releases/20191214014527/vendor/composer/f83b1d83'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install doctrine/dbal v2.10.0)
+
+  - Installing doctrine/inflector (1.3.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/doctrine/inflector/be4dfb34f5fc96aee612fb3719526ca3606301b2.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/doctrine/inflector/7bd2b73af9508a403fbb12f77f7aebd7' -d '/var/www/server/releases/20191214014527/vendor/composer/fc03d1bf'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install doctrine/inflector 1.3.1)
+
+  - Installing doctrine/lexer (1.2.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/doctrine/lexer/acfba781809f831210f50c2bf39abc3bbe689088.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/doctrine/lexer/7c039b52ff05430af7be7c166552ecc2' -d '/var/www/server/releases/20191214014527/vendor/composer/8e3df2e8'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install doctrine/lexer 1.2.0)
+
+ DEBUG [4e90f680] 	  - Installing dragonmantank/cron-expression (v2.3.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/dragonmantank/cron-expression/f4e0baa8dc33506e8237fdb86c027af3bb97e316.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/dragonmantank/cron-expression/50d70c124a5dba9f4ec45142f7c0ba32' -d '/var/www/server/releases/20191214014527/vendor/composer/2a3ae54d'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install dragonmantank/cron-expression v2.3.0)
+
+  - Installing erusev/parsedown (1.7.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/erusev/parsedown/535a5cde6a993ab1b19231bb515f4fa02d077a91.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/erusev/parsedown/166ce008c6fd955bfcc0b67ae109a07a' -d '/var/www/server/releases/20191214014527/vendor/composer/c38e9adc'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install erusev/parsedown 1.7.3)
+
+  - Installing symfony/polyfill-ctype (v1.13.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/polyfill-ctype/39a867615104eaa0c3574894d7dbf978962ecde4.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/polyfill-ctype/7baaff7d2cc9e1102f2ed5e8e9e9d544' -d '/var/www/server/releases/20191214014527/vendor/composer/9fd7d26d'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/polyfill-ctype v1.13.1)
+
+ DEBUG [4e90f680] 	  - Installing phpoption/phpoption (1.6.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpoption/phpoption/860c914d2b2ba245c58c7a77f11b1d79ff4e6cdf.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpoption/phpoption/494c34a814686bcb9df593b93d905e13' -d '/var/www/server/releases/20191214014527/vendor/composer/c8d0040b'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpoption/phpoption 1.6.0)
+
+ DEBUG [4e90f680] 	  - Installing vlucas/phpdotenv (v3.6.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/vlucas/phpdotenv/97a1a5a65d2c5f8240d4d700abd8b9dd2f3139ac.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/vlucas/phpdotenv/af9a75a470f5b72372f14f5417d24a77' -d '/var/www/server/releases/20191214014527/vendor/composer/2ae9fe59'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install vlucas/phpdotenv v3.6.0)
+
+  - Installing symfony/css-selector (v5.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/css-selector/2c9ff957c10e9ca2649194105d4bc34afd5e5aae.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/css-selector/96f4bbaef38a504ba2f4d5e5e3b32089' -d '/var/www/server/releases/20191214014527/vendor/composer/3a48019b'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/css-selector v5.0.1)
+
+  - Installing tijsverkoyen/css-to-inline-styles (2.2.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/tijsverkoyen/css-to-inline-styles/1363e5d067dbac4a59a3d7e5a0d5d79709f1447d.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/tijsverkoyen/css-to-inline-styles/d7d23d75c0ba6a6b3ac6e0b320903438' -d '/var/www/server/releases/20191214014527/vendor/composer/c6d97254'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install tijsverkoyen/css-to-inline-styles 2.2.2)
+
+ DEBUG [4e90f680] 	  - Installing symfony/polyfill-php72 (v1.13.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/polyfill-php72/78edddf04ec63aed201970295116ca929d8666bf.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/polyfill-php72/2f0db93b634b234ba9cf26074124faff' -d '/var/www/server/releases/20191214014527/vendor/composer/56c85f0d'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/polyfill-php72 v1.13.1)
+
+ DEBUG [4e90f680] 	  - Installing symfony/polyfill-mbstring (v1.13.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/polyfill-mbstring/9ef17e72f5737f3fa2ee3d822c4dcd25339003d7.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/polyfill-mbstring/d121508f7a805e464c02eb7082fea087' -d '/var/www/server/releases/20191214014527/vendor/composer/1aa2e760'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/polyfill-mbstring v1.13.1)
+
+ DEBUG [4e90f680] 	  - Installing symfony/var-dumper (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/var-dumper/2f9733ba766e51ec73f3019bf14b774814abc943.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/var-dumper/abbe141d9c0e8071a9faa2ab4979b905' -d '/var/www/server/releases/20191214014527/vendor/composer/d76bab91'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/var-dumper v4.4.1)
+
+  - Installing symfony/routing (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/routing/4f60cc8781dab7ce64525f02c3c4fb4ba2c95600.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/routing/f4f1a40682242ae1eb7cc3f7aace1c69' -d '/var/www/server/releases/20191214014527/vendor/composer/f29c6c28'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/routing v4.4.1)
+
+  - Installing symfony/process (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/process/45f46a4f3c252b95797d5ca51a97f58602fbc355.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/process/b8a918039f48f6196b1720e1fba24379' -d '/var/www/server/releases/20191214014527/vendor/composer/239c4411'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/process v4.4.1)
+
+ DEBUG [4e90f680] 	  - Installing symfony/polyfill-php73 (v1.13.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/polyfill-php73/a3f4ce12f91a53a88f31718ef5f9cb4a57e74894.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/polyfill-php73/1da81faa2ba29f4f433b1f3cf9e9c98a' -d '/var/www/server/releases/20191214014527/vendor/composer/ab29a057'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/polyfill-php73 v1.13.1)
+
+ DEBUG [4e90f680] 	  - Installing symfony/polyfill-intl-idn (v1.13.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/polyfill-intl-idn/b4dc7d88937d27561f77ea9b49dbcdb1fd17dcac.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/polyfill-intl-idn/0fd9df70e575a8b4fc3e10a1e9ebf54a' -d '/var/www/server/releases/20191214014527/vendor/composer/f9cd9fcc'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/polyfill-intl-idn v1.13.1)
+
+  - Installing symfony/mime (v5.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/mime/31bd116d4b0b4de97623ca38d32700bf6542c07f.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/mime/e666327359df4ac33234b45be6449838' -d '/var/www/server/releases/20191214014527/vendor/composer/f20a654a'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/mime v5.0.1)
+
+ DEBUG [4e90f680] 	  - Installing symfony/http-foundation (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/http-foundation/bde47dde19cdb47ca42d19cc030056d068ab5ff9.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/http-foundation/08bbeea19f6fa7b9a39ba4253838145c' -d '/var/www/server/releases/20191214014527/vendor/composer/909d344c'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/http-foundation v4.4.1)
+
+ DEBUG [4e90f680] 	  - Installing symfony/event-dispatcher-contracts (v1.1.7): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/event-dispatcher-contracts/81e91e4f8517d7e14ebce3e7df2096b97fc662d0.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/event-dispatcher-contracts/0ce3cbd52211603000557a56569c9a3e' -d '/var/www/server/releases/20191214014527/vendor/composer/dd12a4d2'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/event-dispatcher-contracts v1.1.7)
+
+ DEBUG [4e90f680] 	  - Installing symfony/event-dispatcher (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/event-dispatcher/67d30217b0c878d949a02d3ba966b1b282b4d609.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/event-dispatcher/2525804d1a68870e12e00d6b9fe5c00d' -d '/var/www/server/releases/20191214014527/vendor/composer/74d783bc'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/event-dispatcher v4.4.1)
+
+  - Installing psr/log (1.1.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/psr/log/3cbd52d9b69b041a06845d06b1b2004a756cb188.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/psr/log/30436abbc68608f7dcb41fa65b7e6fab' -d '/var/www/server/releases/20191214014527/vendor/composer/1a410bc6'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install psr/log 1.1.2)
+
+  - Installing symfony/debug (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/debug/d04f1f15b02cf10dc2643e2871cf80d86a212026.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/debug/7457e266a77030cf730438d03dd0c352' -d '/var/www/server/releases/20191214014527/vendor/composer/7765d448'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/debug v4.4.1)
+
+  - Installing symfony/error-handler (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/error-handler/55ca2192c173b353605ac855a8bd64bce837fbed.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/error-handler/96f476585a9a41fea8f897cdb56feffc' -d '/var/www/server/releases/20191214014527/vendor/composer/28891842'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/error-handler v4.4.1)
+
+  - Installing symfony/http-kernel (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/http-kernel/a994e9c3ca3e5b8efa7b3ab78d50aed9fc507b01.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/http-kernel/53ea645e3deab1b3564d360065e9bb97' -d '/var/www/server/releases/20191214014527/vendor/composer/50e08a21'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/http-kernel v4.4.1)
+
+  - Installing symfony/finder (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/finder/961de9c9bec6c0b662dee948f636e39a70da76a5.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/finder/b0e803011061d0e823a9d9040348a291' -d '/var/www/server/releases/20191214014527/vendor/composer/7c2295b5'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/finder v4.4.1)
+
+  - Installing psr/container (1.0.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/psr/container/9bd0b358d39e22d7d8d7a342efcb207f3ae9a84d.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/psr/container/0d0e59fef7ab9b4bb05bcad54ed3e503' -d '/var/www/server/releases/20191214014527/vendor/composer/340be9c3'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install psr/container 1.0.0)
+
+  - Installing symfony/service-contracts (v2.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/service-contracts/6c99e2dc06993c4f007407c3111bc875e4bac824.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/service-contracts/41cd348be756661d88dea5eda31ab999' -d '/var/www/server/releases/20191214014527/vendor/composer/ff0e3753'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/service-contracts v2.0.1)
+
+  - Installing symfony/console (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/console/95afd308b42d95195c4dd367b46561238f799ca3.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/console/5a7a649d55a694f770b9fc12611ceb8b' -d '/var/www/server/releases/20191214014527/vendor/composer/493b80b6'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/console v4.4.1)
+
+  - Installing symfony/polyfill-iconv (v1.13.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/polyfill-iconv/77d6752e6f0495de28bb1e0e4b00e643f664fd5a.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/polyfill-iconv/172d2b818d9d25fb1bbf842a9a25f2c4' -d '/var/www/server/releases/20191214014527/vendor/composer/4898a268'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/polyfill-iconv v1.13.1)
+
+  - Installing egulias/email-validator (2.1.11): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/egulias/email-validator/701f0b482a58567ae0255d4927876d33b3c25d1a.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/egulias/email-validator/8cc1c4b6741d6ea2e99dee68908a3950' -d '/var/www/server/releases/20191214014527/vendor/composer/0d1797ed'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install egulias/email-validator 2.1.11)
+
+  - Installing swiftmailer/swiftmailer (v6.2.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/swiftmailer/swiftmailer/7caae1d2c6a3be9bdfea75780ef3ed07c137df17.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/swiftmailer/swiftmailer/43e1dd162156cabc83c224e934f35734' -d '/var/www/server/releases/20191214014527/vendor/composer/9f2314f5'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install swiftmailer/swiftmailer v6.2.3)
+
+  - Installing paragonie/random_compat (v9.99.99): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/paragonie/random_compat/4296d043eccd1d50ae22ea650174df624e2a438e.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/paragonie/random_compat/0d8c515a529b0b7d06fd4ec7c3b50c2e' -d '/var/www/server/releases/20191214014527/vendor/composer/600b4708'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install paragonie/random_compat v9.99.99)
+
+ DEBUG [4e90f680] 	  - Installing ramsey/uuid (3.9.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/ramsey/uuid/1630368202fa9a4e0c35daefff512ff624b2263c.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/ramsey/uuid/c6f7bf0b54d3c8efae8102f1caf2ca8a' -d '/var/www/server/releases/20191214014527/vendor/composer/b3ba5044'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install ramsey/uuid 3.9.1)
+
+  - Installing psr/simple-cache (1.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/psr/simple-cache/977de1cd1e7a1a991cbdf4204e86faeaeeb42382.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/psr/simple-cache/0b5e021bcab7c57670ba56d82d83c11e' -d '/var/www/server/releases/20191214014527/vendor/composer/d9e925a7'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install psr/simple-cache 1.0.1)
+
+ DEBUG [4e90f680] 	  - Installing opis/closure (3.5.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/opis/closure/083b6430067790bb7f64d0dbbba3552a2a36acc8.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/opis/closure/4d6e892a421e5c24526611cde554fca3' -d '/var/www/server/releases/20191214014527/vendor/composer/b1b704c9'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install opis/closure 3.5.1)
+
+  - Installing symfony/translation-contracts (v2.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/translation-contracts/8c50f1802b70ebf933cc0075f43c339354dc2d19.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/translation-contracts/17637c51fed7721854baa14cdd379053' -d '/var/www/server/releases/20191214014527/vendor/composer/4a6bfec3'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/translation-contracts v2.0.1)
+
+  - Installing symfony/translation (v4.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/translation/f8730d31a803e0abded982546d4042510c588695.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/translation/9c4d3bb69c2a147b13f04557c0c71b07' -d '/var/www/server/releases/20191214014527/vendor/composer/2fcd63b9'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/translation v4.4.1)
+
+  - Installing nesbot/carbon (2.27.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/nesbot/carbon/6eaade2a03d88efdde2c2372cf2c8621dbb67c20.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/nesbot/carbon/69ad86e13d95665aea9cdb2b79eb763c' -d '/var/www/server/releases/20191214014527/vendor/composer/b573d496'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install nesbot/carbon 2.27.0)
+
+  - Installing monolog/monolog (2.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/monolog/monolog/424f1a782aa243f7f53f1d420a2aa559f093ed98.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/monolog/monolog/f86776a6d8bdc88aa9c4302e93c6a28f' -d '/var/www/server/releases/20191214014527/vendor/composer/62d577b4'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install monolog/monolog 2.0.1)
+
+  - Installing league/flysystem (1.0.57): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/league/flysystem/b0b23ffceddd1245e0b6947e9ac817c660a6992a.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/league/flysystem/3143e7bb80c0bde87c94518bb3aa8a24' -d '/var/www/server/releases/20191214014527/vendor/composer/b1191652'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install league/flysystem 1.0.57)
+
+  - Installing laravel/framework (v6.6.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/laravel/framework/e713d56c101245ff96325f5a5d019792042d5f43.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/laravel/framework/bb518bbc2bd8d03effc83eaa78ad54a9' -d '/var/www/server/releases/20191214014527/vendor/composer/d648ca59'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install laravel/framework v6.6.0)
+
+ DEBUG [4e90f680] 	  - Installing fideloper/proxy (4.2.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/fideloper/proxy/b2e85eec72c07b3887ac30189df4b1d522e37bec.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/fideloper/proxy/17ecc8ed37a037fd2cd781d25f4adeba' -d '/var/www/server/releases/20191214014527/vendor/composer/a255891d'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install fideloper/proxy 4.2.1)
+
+  - Installing guzzlehttp/promises (v1.3.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/guzzlehttp/promises/ba05e5df3bded4f01482d4b16ae313a79742eba6.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/guzzlehttp/promises/9d6b1a1a8145a89554fead641b2bc9aa' -d '/var/www/server/releases/20191214014527/vendor/composer/dfac1621'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install guzzlehttp/promises v1.3.1)
+
+  - Installing ralouphie/getallheaders (3.0.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/ralouphie/getallheaders/ddc5f4c7ab3d868f5060717336a0d93475d53175.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/ralouphie/getallheaders/998f134485cebae7ad635e688393ec80' -d '/var/www/server/releases/20191214014527/vendor/composer/ad952e5f'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install ralouphie/getallheaders 3.0.3)
+
+  - Installing psr/http-message (1.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/psr/http-message/cc1d4e9ee13f2053b80c08976256789bf3be5256.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/psr/http-message/8af18e8ca9393a09eed6c97e2fd7f09e' -d '/var/www/server/releases/20191214014527/vendor/composer/308c086e'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install psr/http-message 1.0.1)
+
+ DEBUG [4e90f680] 	  - Installing guzzlehttp/psr7 (1.6.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/guzzlehttp/psr7/cd0b2a92601ddd5a4e6d4f5e968b0e17edcb7028.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/guzzlehttp/psr7/15e6a1d392a8d42606dbffb98ff31a32' -d '/var/www/server/releases/20191214014527/vendor/composer/711e8145'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install guzzlehttp/psr7 1.6.1)
+
+  - Installing jakub-onderka/php-console-color (v0.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/jakub-onderka/php-console-color/fc51518233d11b43ef6ed5846bd9b655f95031dc.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/jakub-onderka/php-console-color/497bd278df84b023b714413a0e8ae72f' -d '/var/www/server/releases/20191214014527/vendor/composer/65db0938'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install jakub-onderka/php-console-color v0.2)
+
+ DEBUG [4e90f680] 	  - Installing psr/http-factory (1.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/psr/http-factory/554dafa2f4680a78fa693cedcbe62bc6873809db.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/psr/http-factory/722bee7552850c34dca76996756b18db' -d '/var/www/server/releases/20191214014527/vendor/composer/40fcf21f'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install psr/http-factory 1.0.1)
+
+ DEBUG [4e90f680] 	  - Installing zendframework/zend-diactoros (2.2.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/zendframework/zend-diactoros/3a7b5c5d1f22041ca9232ad1aa089d4b3b9478cd.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/zendframework/zend-diactoros/5ce3e92283938317c2049a4d7d4fc83a' -d '/var/www/server/releases/20191214014527/vendor/composer/d41de49f'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install zendframework/zend-diactoros 2.2.1)
+
+  - Installing symfony/psr-http-message-bridge (v1.3.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/symfony/psr-http-message-bridge/52a27ffc3f7ccd2e15bd14ee186dcbcd318c627c.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/symfony/psr-http-message-bridge/b195b589265a4ba221edb869656f2474' -d '/var/www/server/releases/20191214014527/vendor/composer/8c4b7d8d'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install symfony/psr-http-message-bridge v1.3.0)
+
+  - Installing phpseclib/phpseclib (2.0.23): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpseclib/phpseclib/d73b06912cedc880a8b0d545cd60351b360f641c.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpseclib/phpseclib/54b05eeda5ce0fe9c1f63329216bb01e' -d '/var/www/server/releases/20191214014527/vendor/composer/d4c21f39'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpseclib/phpseclib 2.0.23)
+
+ DEBUG [4e90f680] 	  - Installing league/event (2.2.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/league/event/0f270bcc92a61d9f5346ecaaa71ac81a15597b5c.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/league/event/2d83e6538dfbeb68975843020c37b73e' -d '/var/www/server/releases/20191214014527/vendor/composer/ee98634b'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install league/event 2.2.0)
+
+  - Installing lcobucci/jwt (3.3.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/lcobucci/jwt/8f545e05c6b1b1e46b2f3f70d380324414c1d4ea.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/lcobucci/jwt/efbc901ba000b6be19ee48f40ba4f071' -d '/var/www/server/releases/20191214014527/vendor/composer/c219ce5f'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install lcobucci/jwt 3.3.1)
+
+  - Installing defuse/php-encryption (v2.2.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/defuse/php-encryption/e0d9960f25b40a6ae824245e6314406d0441e338.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/defuse/php-encryption/977dfc7f1557fd42ddfd44b86ed066e4' -d '/var/www/server/releases/20191214014527/vendor/composer/05cd7e6e'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install defuse/php-encryption v2.2.1)
+
+  - Installing league/oauth2-server (8.0.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/league/oauth2-server/1edf66df7aa313a8c09580aaeae15ca60f154401.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/league/oauth2-server/d09bfe92f60767ac40fad912fbb8466a' -d '/var/www/server/releases/20191214014527/vendor/composer/69e930cc'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install league/oauth2-server 8.0.0)
+
+ DEBUG [4e90f680] 	  - Installing guzzlehttp/guzzle (6.4.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/guzzlehttp/guzzle/9181afbf7f00d90b98b5a4e42688c79f64056e93.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/guzzlehttp/guzzle/ae1ee21389ee2b8dadcde7402d8d2f61' -d '/var/www/server/releases/20191214014527/vendor/composer/50bd8ee0'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install guzzlehttp/guzzle 6.4.1)
+
+  - Installing firebase/php-jwt (v5.0.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/firebase/php-jwt/2e4174f7982cbea71dbc881e711d95316690c33c.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/firebase/php-jwt/64dd18aa2b999806e340d15ed29145fa' -d '/var/www/server/releases/20191214014527/vendor/composer/c8f28290'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install firebase/php-jwt v5.0.0)
+
+ DEBUG [4e90f680] 	  - Installing laravel/passport (v8.0.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/laravel/passport/4cf3aff16e0abe76ac6d9f8a9700f017345d1448.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/laravel/passport/d216237725e3fcbf8de003b8c3e1fc26' -d '/var/www/server/releases/20191214014527/vendor/composer/3029dae2'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install laravel/passport v8.0.2)
+
+ DEBUG [4e90f680] 	  - Installing nikic/php-parser (v4.3.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/nikic/php-parser/0863dec1a401ffbf1e6adffc231e02bcd54f0450.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/nikic/php-parser/fd87de7035a6f0a20185dad5617b828d' -d '/var/www/server/releases/20191214014527/vendor/composer/11ca530c'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install nikic/php-parser v4.3.0)
+
+  - Installing jakub-onderka/php-console-highlighter (v0.4): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/jakub-onderka/php-console-highlighter/b07eac94158d047f377959dd8c014085dd1240ae.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/jakub-onderka/php-console-highlighter/f4ea2d5f9900843f3ea33b896b082e5c' -d '/var/www/server/releases/20191214014527/vendor/composer/f8e02d75'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install jakub-onderka/php-console-highlighter v0.4)
+
+ DEBUG [4e90f680] 	  - Installing dnoegel/php-xdg-base-dir (0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/dnoegel/php-xdg-base-dir/b83cbca65f432f66139b1c11bdf6e2dd52bc93ba.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/dnoegel/php-xdg-base-dir/233ce9dfa018e4049e9ed4f5668c2d6c' -d '/var/www/server/releases/20191214014527/vendor/composer/15e77f3a'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install dnoegel/php-xdg-base-dir 0.1)
+
+ DEBUG [4e90f680] 	  - Installing psy/psysh (v0.9.11): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/psy/psysh/d7f98f324ea74243d822b170d31aa3240c96b793.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/psy/psysh/c00484076dc91ade6e311dc3ec8eb048' -d '/var/www/server/releases/20191214014527/vendor/composer/b64ad8ba'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install psy/psysh v0.9.11)
+
+ DEBUG [4e90f680] 	  - Installing laravel/tinker (v1.0.10): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/laravel/tinker/1ea7116f4941a0ea81bf7736d0872854a587b556.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/laravel/tinker/05252be847fe6af083744e8df95d1760' -d '/var/www/server/releases/20191214014527/vendor/composer/37322b62'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install laravel/tinker v1.0.10)
+
+ DEBUG [4e90f680] 	  - Installing scrivo/highlight.php (v9.15.10.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/scrivo/highlight.php/73569b3e1953f214fed1cae6cd9bb6bcb103c411.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/scrivo/highlight.php/f43d7a4384508a7e3401d48f19bd8e5c' -d '/var/www/server/releases/20191214014527/vendor/composer/77d7357b'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install scrivo/highlight.php v9.15.10.0)
+
+ DEBUG [4e90f680] 	  - Installing filp/whoops (2.5.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/filp/whoops/09e0e06ca28db2b5b8efcf1185eb8317d7da5393.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/filp/whoops/1fb322160a5621100078a5153bcb97e0' -d '/var/www/server/releases/20191214014527/vendor/composer/65eecab6'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install filp/whoops 2.5.0)
+
+ DEBUG [4e90f680] 	  - Installing facade/ignition-contracts (1.0.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/facade/ignition-contracts/a525f12587dc164e59babce75d2aa3019dc48c58.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/facade/ignition-contracts/c824b2263a9603c98f341083e19734b0' -d '/var/www/server/releases/20191214014527/vendor/composer/ea6d5369'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install facade/ignition-contracts 1.0.0)
+
+ DEBUG [4e90f680] 	  - Installing facade/flare-client-php (1.3.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/facade/flare-client-php/0c42d32147191f7b26cdd209a7cf721bf092bdd0.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/facade/flare-client-php/61e1066f19d7cfdd76015fb4ed6eb8d5' -d '/var/www/server/releases/20191214014527/vendor/composer/810ef479'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install facade/flare-client-php 1.3.0)
+
+ DEBUG [4e90f680] 	  - Installing facade/ignition (1.13.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/facade/ignition/0b42aad68353f45d7eb889c7b03f607ac2d6f247.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/facade/ignition/0abd7695980ee4b97742f5439e03b7c2' -d '/var/www/server/releases/20191214014527/vendor/composer/6b9a945d'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install facade/ignition 1.13.0)
+
+ DEBUG [4e90f680] 	  - Installing fzaninotto/faker (v1.9.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/fzaninotto/faker/6028917bb713631827b7134b1161451040528b28.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/fzaninotto/faker/406030b5b297eee4b041f38f5a7446bf' -d '/var/www/server/releases/20191214014527/vendor/composer/e7b88478'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install fzaninotto/faker v1.9.0)
+
+  - Installing sebastian/recursion-context (3.0.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/recursion-context/f8c1c1968fbcf5ae9af5ec6ceb30aab26fa949b2.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/recursion-context/3126d737b9cf24cac701190bfff5c1e3' -d '/var/www/server/releases/20191214014527/vendor/composer/f6fd373e'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/recursion-context 3.0.0)
+
+ DEBUG [4e90f680] 	  - Installing sebastian/exporter (3.1.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/exporter/331a7ff7006f116504fd143fccd63dbfda2e80b3.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/exporter/3827e6fba747005f8524178661b1c236' -d '/var/www/server/releases/20191214014527/vendor/composer/73365a0a'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/exporter 3.1.2)
+
+ DEBUG [4e90f680] 	  - Installing sebastian/diff (3.0.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/diff/e6140b7bac501c4f9a1ee510440e3b8aff26e8d5.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/diff/bec407752683f5a6fb571ac001cd85db' -d '/var/www/server/releases/20191214014527/vendor/composer/be737a48'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/diff 3.0.2)
+
+  - Installing sebastian/comparator (3.0.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/comparator/6f6a5004ba92a72cc62a4983fe102df11076b827.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/comparator/ee4801877e457754ab15d20cb6fab1a5' -d '/var/www/server/releases/20191214014527/vendor/composer/aae14bab'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/comparator 3.0.2)
+
+ DEBUG [4e90f680] 	  - Installing hamcrest/hamcrest-php (v2.0.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/hamcrest/hamcrest-php/d042c0975dfcbebdb0f3c314e039589ead2e812e.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/hamcrest/hamcrest-php/914fd35e55047bf77d7f10f3ee41f506' -d '/var/www/server/releases/20191214014527/vendor/composer/d1cf9758'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install hamcrest/hamcrest-php v2.0.0)
+
+  - Installing mockery/mockery (1.3.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/mockery/mockery/947c2dfb4877cad72a011a123a7a772b0fdf596c.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/mockery/mockery/cbefd5813bf969ba85967a8c0ea77ba0' -d '/var/www/server/releases/20191214014527/vendor/composer/b4833350'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install mockery/mockery 1.3.0)
+
+ DEBUG [4e90f680] 	  - Installing nunomaduro/collision (v3.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/nunomaduro/collision/dda66ef7d7589cf61f6955bc901312cd0ca7d969.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/nunomaduro/collision/b7c36ad8f6282820fffcb241569981d4' -d '/var/www/server/releases/20191214014527/vendor/composer/1a473266'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install nunomaduro/collision v3.0.1)
+
+ DEBUG [4e90f680] 	  - Installing webmozart/assert (1.6.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/webmozart/assert/172ac29b05d398f16f43481102c9a86d868e8eb3.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/webmozart/assert/3a879a7c67d747ee5844771734dc5663' -d '/var/www/server/releases/20191214014527/vendor/composer/2388cc26'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install webmozart/assert 1.6.0)
+
+  - Installing phpdocumentor/reflection-common (2.0.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpdocumentor/reflection-common/989820d4d3bc32a26c6e3cc70dd511d1b2102399.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpdocumentor/reflection-common/e6e30ebf8b2587b3f17c72eb36e80f37' -d '/var/www/server/releases/20191214014527/vendor/composer/7ddc9b69'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpdocumentor/reflection-common 2.0.0)
+
+ DEBUG [4e90f680] 	  - Installing phpdocumentor/type-resolver (1.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpdocumentor/type-resolver/15b3ff51bc5c098484c651fe08e049a02f8905b6.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpdocumentor/type-resolver/79ef20dfba57ef9768f232bee0c86493' -d '/var/www/server/releases/20191214014527/vendor/composer/83177c9d'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpdocumentor/type-resolver 1.0.1)
+
+ DEBUG [4e90f680] 	  - Installing phpdocumentor/reflection-docblock (4.3.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpdocumentor/reflection-docblock/acc15809a9b421ff34159cb5a3ee4d81f7456503.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpdocumentor/reflection-docblock/71fbc735447031207380ef4ae386540b' -d '/var/www/server/releases/20191214014527/vendor/composer/541c9d5d'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpdocumentor/reflection-docblock 4.3.2)
+
+ DEBUG [4e90f680] 	  - Installing phpunit/php-token-stream (3.1.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpunit/php-token-stream/bd6473cbc552bde39682c8d019b2c96baaf8e32a.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpunit/php-token-stream/02fb5bcaa62bf4c0117d63774e1830e1' -d '/var/www/server/releases/20191214014527/vendor/composer/c81bc4f6'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpunit/php-token-stream 3.1.1)
+
+  - Installing sebastian/version (2.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/version/c315a200d32565a6d8ebb3495cb5ae34c5ced3c8.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/version/2163550d5d633532e8850134d6ccca71' -d '/var/www/server/releases/20191214014527/vendor/composer/c7ae5b93'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/version 2.0.1)
+
+ DEBUG [4e90f680] 	  - Installing sebastian/type (1.1.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/type/6c86af81e3d675f46bfc7bded8179ef036eacbe6.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/type/f3d00fd3966443847ba43e48cc7f6942' -d '/var/www/server/releases/20191214014527/vendor/composer/cd868bfe'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/type 1.1.3)
+
+ DEBUG [4e90f680] 	  - Installing sebastian/resource-operations (2.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/resource-operations/5a27fbb9d458caeca4ba4f68794395b0673dcbef.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/resource-operations/2eaed86fc97efffe24504660670c11c5' -d '/var/www/server/releases/20191214014527/vendor/composer/9fad8f29'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/resource-operations 2.0.1)
+
+ DEBUG [4e90f680] 	  - Installing sebastian/object-reflector (1.1.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/object-reflector/5c43ed184bdc32c1be2cebdc45c53727b61c366e.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/object-reflector/44808390ecd07d1858e45e649f5bf841' -d '/var/www/server/releases/20191214014527/vendor/composer/95f1db6b'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/object-reflector 1.1.1)
+
+ DEBUG [4e90f680] 	  - Installing sebastian/object-enumerator (3.0.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/object-enumerator/38cda1088c4ea6478e144eed041619e5c731b8ba.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/object-enumerator/7f5f969dd03ab549d0855100b6a4d2c1' -d '/var/www/server/releases/20191214014527/vendor/composer/630a1896'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/object-enumerator 3.0.3)
+
+ DEBUG [4e90f680] 	  - Installing sebastian/global-state (3.0.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/global-state/5eec8e48052fd6b5c9c52d704890e41edcd90f37.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/global-state/20f700ab29e8694d23317fcc7e8d144b' -d '/var/www/server/releases/20191214014527/vendor/composer/00d0ce64'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/global-state 3.0.0)
+
+ DEBUG [4e90f680] 	  - Installing sebastian/environment (4.2.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/environment/f24906d5c02cabcc22893eed6efed53b55a529f6.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/environment/4be235d3179a0018cf65c8d48c848682' -d '/var/www/server/releases/20191214014527/vendor/composer/bb03c34e'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/environment 4.2.3)
+
+ DEBUG [4e90f680] 	  - Installing phpunit/php-timer (2.1.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpunit/php-timer/5d1cc231bf922cbe1994798457539b5e0210063e.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpunit/php-timer/479dd2b075a35d591e499b9449b30069' -d '/var/www/server/releases/20191214014527/vendor/composer/566b89a9'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpunit/php-timer 2.1.2)
+
+  - Installing phpunit/php-text-template (1.2.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpunit/php-text-template/2e483bd8277c3ff3905be9160b0938b306ac1069.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpunit/php-text-template/e7868fa452b8c039f71b1a02c21362fc' -d '/var/www/server/releases/20191214014527/vendor/composer/ecf16694'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpunit/php-text-template 1.2.1)
+
+ DEBUG [4e90f680] 	  - Installing phpunit/php-file-iterator (2.0.2): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpunit/php-file-iterator/b0a63482ef2c09625cd88f7460cebada5ec78a61.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpunit/php-file-iterator/380fb31539c2c71063eae7afef5504e6' -d '/var/www/server/releases/20191214014527/vendor/composer/a84454c7'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpunit/php-file-iterator 2.0.2)
+
+ DEBUG [4e90f680] 	  - Installing theseer/tokenizer (1.1.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/theseer/tokenizer/9f108d4e5b5b3c7a693eed39a630bdeb969c2f15.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/theseer/tokenizer/9aff3032f5d915eed88f086315c7060d' -d '/var/www/server/releases/20191214014527/vendor/composer/8b4e810c'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install theseer/tokenizer 1.1.3)
+
+ DEBUG [4e90f680] 	  - Installing sebastian/code-unit-reverse-lookup (1.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/sebastian/code-unit-reverse-lookup/9fdb38e356a0265a2dd6b64495413906b9366038.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/sebastian/code-unit-reverse-lookup/b4a9899a850dc0902894d93c45f0877e' -d '/var/www/server/releases/20191214014527/vendor/composer/97b1e916'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install sebastian/code-unit-reverse-lookup 1.0.1)
+
+  - Installing phpunit/php-code-coverage (7.0.10): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpunit/php-code-coverage/d1bd6194d43d85fc4a5598e6a650ad8d0e1cf8aa.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpunit/php-code-coverage/faad1f015a3a5fe0f26aac4677f4d629' -d '/var/www/server/releases/20191214014527/vendor/composer/21571684'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpunit/php-code-coverage 7.0.10)
+
+ DEBUG [4e90f680] 	  - Installing doctrine/instantiator (1.3.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/doctrine/instantiator/09dbbc80058481f4c7b661e8c9bd0c8408178501.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/doctrine/instantiator/1daeffecae11d4593cb53f801ef85ddb' -d '/var/www/server/releases/20191214014527/vendor/composer/f918086b'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install doctrine/instantiator 1.3.0)
+
+ DEBUG [4e90f680] 	  - Installing phpspec/prophecy (1.9.0): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpspec/prophecy/2b5c547676e9cbe0a32c16e68687a6f4634ca488.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpspec/prophecy/968586ce20ead32d371c8ca462378b37' -d '/var/www/server/releases/20191214014527/vendor/composer/2493c4dc'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpspec/prophecy 1.9.0)
+
+  - Installing phar-io/version (2.0.1): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phar-io/version/40d39961466b12b36285c10a47f16a90731e5b71.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phar-io/version/05c903adbca9680516e1aa3ddcd8a11c' -d '/var/www/server/releases/20191214014527/vendor/composer/8c900ec0'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phar-io/version 2.0.1)
+
+ DEBUG [4e90f680] 	  - Installing phar-io/manifest (1.0.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phar-io/manifest/7594b0b62ecd9d09967f6a8274ba7381e265b200.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phar-io/manifest/1130ac36f5748dd3241f77b42ee61ed0' -d '/var/www/server/releases/20191214014527/vendor/composer/3a77d4ab'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phar-io/manifest 1.0.3)
+
+ DEBUG [4e90f680] 	  - Installing myclabs/deep-copy (1.9.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/myclabs/deep-copy/a60f7dbe0bde64f9dcca2b3799424ae87192faae.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/myclabs/deep-copy/3a8d3624149bf0b4b90e862848de25d8' -d '/var/www/server/releases/20191214014527/vendor/composer/6c9d57ca'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install myclabs/deep-copy 1.9.3)
+
+ DEBUG [4e90f680] 	  - Installing phpunit/phpunit (8.4.3): 
+ DEBUG [4e90f680] 	Reading /home/ubuntu/.cache/composer/files/phpunit/phpunit/3f9a397c059780f2c9b217c5f3bf96c67f1f008a.zip from cache
+ DEBUG [4e90f680] 	Loading from cache
+ DEBUG [4e90f680] 	
+ DEBUG [4e90f680] 	 Extracting archive
+ DEBUG [4e90f680] 	Executing command (CWD): unzip -qq -o '/var/www/server/releases/20191214014527/vendor/phpunit/phpunit/80ceabb9a1dfb94ed6e8d519ebe62e0c' -d '/var/www/server/releases/20191214014527/vendor/composer/b31eabbb'
+ DEBUG [4e90f680] 	    REASON: Required by the root package: Install command rule (install phpunit/phpunit 8.4.3)
+
+ DEBUG [4e90f680] 	doctrine/cache suggests installing alcaeus/mongo-php-adapter (Required to use legacy MongoDB driver)
+ DEBUG [4e90f680] 	symfony/var-dumper suggests installing ext-intl (To show region name in time zone dump)
+ DEBUG [4e90f680] 	symfony/routing suggests installing doctrine/annotations (For using the annotation loader)
+ DEBUG [4e90f680] 	symfony/routing suggests installing symfony/config (For using the all-in-one router or any loader)
+ DEBUG [4e90f680] 	symfony/routing suggests installing symfony/expression-language (For using expression matching)
+ DEBUG [4e90f680] 	symfony/routing suggests installing symfony/yaml (For using the YAML loader)
+ DEBUG [4e90f680] 	symfony/polyfill-intl-idn suggests installing ext-intl (For best performance)
+ DEBUG [4e90f680] 	symfony/event-dispatcher-contracts suggests installing psr/event-dispatcher
+ DEBUG [4e90f680] 	symfony/event-dispatcher suggests installing symfony/dependency-injection
+ DEBUG [4e90f680] 	symfony/http-kernel suggests installing symfony/browser-kit
+ DEBUG [4e90f680] 	symfony/http-kernel suggests installing symfony/config
+ DEBUG [4e90f680] 	symfony/http-kernel suggests installing symfony/dependency-injection
+ DEBUG [4e90f680] 	symfony/service-contracts suggests installing symfony/service-implementation
+ DEBUG [4e90f680] 	symfony/console suggests installing symfony/lock
+ DEBUG [4e90f680] 	egulias/email-validator suggests installing ext-intl (PHP Internationalization Libraries are required to use the SpoofChecking validation)
+ DEBUG [4e90f680] 	swiftmailer/swiftmailer suggests installing ext-intl (Needed to support internationalized email addresses)
+ DEBUG [4e90f680] 	swiftmailer/swiftmailer suggests installing true/punycode (Needed to support internationalized email addresses, if ext-intl is not installed)
+ DEBUG [4e90f680] 	paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
+ DEBUG [4e90f680] 	ramsey/uuid suggests installing ext-libsodium (Provides the PECL libsodium extension for use with the SodiumRandomGenerator)
+ DEBUG [4e90f680] 	ramsey/uuid suggests installing ext-uuid (Provides the PECL UUID extension for use with the PeclUuidTimeGenerator and PeclUuidRandomGenerator)
+ DEBUG [4e90f680] 	ramsey/uuid suggests installing moontoast/math (Provides support for converting UUID to 128-bit integer (in string form).)
+ DEBUG [4e90f680] 	ramsey/uuid suggests installing paragonie/random-lib (Provides RandomLib for use with the RandomLibAdapter)
+ DEBUG [4e90f680] 	ramsey/uuid suggests installing ramsey/uuid-console (A console application for generating UUIDs with ramsey/uuid)
+ DEBUG [4e90f680] 	ramsey/uuid suggests installing ramsey/uuid-doctrine (Allows the use of Ramsey\Uuid\Uuid as Doctrine field type.)
+ DEBUG [4e90f680] 	symfony/translation suggests installing symfony/config
+ DEBUG [4e90f680] 	symfony/translation suggests installing symfony/yaml
+ DEBUG [4e90f680] 	monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
+ DEBUG [4e90f680] 	monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+ DEBUG [4e90f680] 	monolog/monolog suggests installing elasticsearch/elasticsearch (Allow sending log messages to an Elasticsearch server via official client)
+ DEBUG [4e90f680] 	monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+ DEBUG [4e90f680] 	monolog/monolog suggests installing ext-mongodb (Allow sending log messages to a MongoDB server (via driver))
+ DEBUG [4e90f680] 	monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+ DEBUG [4e90f680] 	monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server (via library))
+ DEBUG [4e90f680] 	monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+ DEBUG [4e90f680] 	monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+ DEBUG [4e90f680] 	monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+ DEBUG [4e90f680] 	monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+ DEBUG [4e90f680] 	league/flysystem suggests installing league/flysystem-aws-s3-v2 (Allows you to use S3 storage with AWS SDK v2)
+ DEBUG [4e90f680] 	league/flysystem suggests installing league/flysystem-aws-s3-v3 (Allows you to use S3 storage with AWS SDK v3)
+ DEBUG [4e90f680] 	league/flysystem suggests installing league/flysystem-azure (Allows you to use Windows Azure Blob storage)
+ DEBUG [4e90f680] 	league/flysystem suggests installing league/flysystem-cached-adapter (Flysystem adapter decorator for metadata caching)
+ DEBUG [4e90f680] 	league/flysystem suggests installing league/flysystem-eventable-filesystem (Allows you to use EventableFilesystem)
+ DEBUG [4e90f680] 	league/flysystem suggests installing league/flysystem-rackspace (Allows you to use Rackspace Cloud Files)
+ DEBUG [4e90f680] 	league/flysystem suggests installing league/flysystem-sftp (Allows you to use SFTP server storage via phpseclib)
+ DEBUG [4e90f680] 	league/flysystem suggests installing league/flysystem-webdav (Allows you to use WebDAV storage)
+ DEBUG [4e90f680] 	league/flysystem suggests installing league/flysystem-ziparchive (Allows you to use ZipArchive adapter)
+ DEBUG [4e90f680] 	league/flysystem suggests installing spatie/flysystem-dropbox (Allows you to use Dropbox storage)
+ DEBUG [4e90f680] 	league/flysystem suggests installing srmklive/flysystem-dropbox-v2 (Allows you to use Dropbox storage for PHP 5 applications)
+ DEBUG [4e90f680] 	laravel/framework suggests installing aws/aws-sdk-php (Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.0).)
+ DEBUG [4e90f680] 	laravel/framework suggests installing ext-gd (Required to use Illuminate\Http\Testing\FileFactory::image().)
+ DEBUG [4e90f680] 	laravel/framework suggests installing ext-memcached (Required to use the memcache cache driver.)
+ DEBUG [4e90f680] 	laravel/framework suggests installing ext-redis (Required to use the Redis cache and queue drivers.)
+ DEBUG [4e90f680] 	laravel/framework suggests installing league/flysystem-aws-s3-v3 (Required to use the Flysystem S3 driver (^1.0).)
+ DEBUG [4e90f680] 	laravel/framework suggests installing league/flysystem-cached-adapter (Required to use the Flysystem cache (^1.0).)
+ DEBUG [4e90f680] 	laravel/framework suggests installing league/flysystem-sftp (Required to use the Flysystem SFTP driver (^1.0).)
+ DEBUG [4e90f680] 	laravel/framework suggests installing moontoast/math (Required to use ordered UUIDs (^1.1).)
+ DEBUG [4e90f680] 	laravel/framework suggests installing pda/pheanstalk (Required to use the beanstalk queue driver (^4.0).)
+ DEBUG [4e90f680] 	laravel/framework suggests installing pusher/pusher-php-server (Required to use the Pusher broadcast driver (^4.0).)
+ DEBUG [4e90f680] 	laravel/framework suggests installing symfony/cache (Required to PSR-6 cache bridge (^4.3.4).)
+ DEBUG [4e90f680] 	laravel/framework suggests installing wildbit/swiftmailer-postmark (Required to use Postmark mail driver (^3.0).)
+ DEBUG [4e90f680] 	guzzlehttp/psr7 suggests installing zendframework/zend-httphandlerrunner (Emit PSR-7 responses)
+ DEBUG [4e90f680] 	symfony/psr-http-message-bridge suggests installing nyholm/psr7 (For a super lightweight PSR-7/17 implementation)
+ DEBUG [4e90f680] 	phpseclib/phpseclib suggests installing ext-gmp (Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.)
+ DEBUG [4e90f680] 	phpseclib/phpseclib suggests installing ext-libsodium (SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.)
+ DEBUG [4e90f680] 	phpseclib/phpseclib suggests installing ext-mcrypt (Install the Mcrypt extension in order to speed up a few other cryptographic operations.)
+ DEBUG [4e90f680] 	psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+ DEBUG [4e90f680] 	psy/psysh suggests installing hoa/console (A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit.)
+ DEBUG [4e90f680] 	filp/whoops suggests installing whoops/soap (Formats errors as SOAP responses)
+ DEBUG [4e90f680] 	facade/ignition suggests installing laravel/telescope (^2.0)
+ DEBUG [4e90f680] 	sebastian/global-state suggests installing ext-uopz (*)
+ DEBUG [4e90f680] 	phpunit/php-code-coverage suggests installing ext-xdebug (^2.7.2)
+ DEBUG [4e90f680] 	phpunit/phpunit suggests installing ext-soap (*)
+ DEBUG [4e90f680] 	phpunit/phpunit suggests installing ext-xdebug (*)
+ DEBUG [4e90f680] 	phpunit/phpunit suggests installing phpunit/php-invoker (^2.0.0)
+ DEBUG [4e90f680] 	Generating optimized autoload files
+ DEBUG [4e90f680] 	> post-autoload-dump: Illuminate\Foundation\ComposerScripts::postAutoloadDump
+ DEBUG [4e90f680] 	> post-autoload-dump: @php artisan package:discover --ansi
+ DEBUG [4e90f680] 	Executing command (CWD): '/usr/bin/php7.2' -d allow_url_fopen='1' -d disable_functions='' -d memory_limit='-1' artisan package:discover --ansi
+ DEBUG [4e90f680] 	Discovered Package: [32mfacade/ignition[39m
+ DEBUG [4e90f680] 	Discovered Package: [32mfideloper/proxy[39m
+ DEBUG [4e90f680] 	Discovered Package: [32mlaravel/passport[39m
+ DEBUG [4e90f680] 	Discovered Package: [32mlaravel/tinker[39m
+ DEBUG [4e90f680] 	Discovered Package: [32mnesbot/carbon[39m
+ DEBUG [4e90f680] 	Discovered Package: [32mnunomaduro/collision[39m
+ DEBUG [4e90f680] 	[32mPackage manifest generated successfully.[39m
+  INFO [4e90f680] Finished in 4.783 seconds with exit status 0 (successful).
+  INFO [6aa33aa3] Running /usr/bin/env echo $USER as ubuntu@13.234.82.187
+ DEBUG [6aa33aa3] Command: /usr/bin/env echo $USER
+ DEBUG [6aa33aa3] 	ubuntu
+  INFO [6aa33aa3] Finished in 3.605 seconds with exit status 0 (successful).
+  INFO [c58a4435] Running /usr/bin/env cp /var/www/secrets/.env /var/www/server/releases/20191214014527/.env as ubuntu@13.234.82.187
+ DEBUG [c58a4435] Command: /usr/bin/env cp /var/www/secrets/.env /var/www/server/releases/20191214014527/.env
+  INFO [c58a4435] Finished in 0.727 seconds with exit status 0 (successful).
+  INFO [9ffdabef] Running /usr/bin/env ln -s /var/www/server/releases/20191214014527 /var/www/server/releases/current as ubuntu@13.234.82.187
+ DEBUG [9ffdabef] Command: /usr/bin/env ln -s /var/www/server/releases/20191214014527 /var/www/server/releases/current
+  INFO [9ffdabef] Finished in 1.066 seconds with exit status 0 (successful).
+  INFO [76055cce] Running /usr/bin/env mv /var/www/server/releases/current /var/www/server as ubuntu@13.234.82.187
+ DEBUG [76055cce] Command: /usr/bin/env mv /var/www/server/releases/current /var/www/server
+  INFO [76055cce] Finished in 0.644 seconds with exit status 0 (successful).
+ DEBUG [45e464a6] Running /usr/bin/env ls -x /var/www/server/releases as ubuntu@13.234.82.187
+ DEBUG [45e464a6] Command: /usr/bin/env ls -x /var/www/server/releases
+ DEBUG [45e464a6] 	20191211094207	20191211095616	20191211100006	20191211115109	20191213101723
+20191214014527
+ DEBUG [45e464a6] Finished in 0.769 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 13.234.82.187
+ DEBUG [1135871a] Running [ -d /var/www/server/current ] as ubuntu@13.234.82.187
+ DEBUG [1135871a] Command: [ -d /var/www/server/current ]
+ DEBUG [1135871a] Finished in 0.515 seconds with exit status 0 (successful).
+ DEBUG [0f7b40e4] Running /usr/bin/env readlink /var/www/server/current as ubuntu@13.234.82.187
+ DEBUG [0f7b40e4] Command: /usr/bin/env readlink /var/www/server/current
+ DEBUG [0f7b40e4] 	/var/www/server/releases/20191214014527
+ DEBUG [0f7b40e4] Finished in 0.666 seconds with exit status 0 (successful).
+  INFO [48c56609] Running /usr/bin/env rm -rf /var/www/server/releases/20191211094207 as ubuntu@13.234.82.187
+ DEBUG [48c56609] Command: /usr/bin/env rm -rf /var/www/server/releases/20191211094207
+  INFO [48c56609] Finished in 1.641 seconds with exit status 0 (successful).
+ DEBUG [c7aa2f4e] Running if test ! -d /var/www/server/releases; then echo "Directory does not exist '/var/www/server/releases'" 1>&2; false; fi as ubuntu@13.234.82.187
+ DEBUG [c7aa2f4e] Command: if test ! -d /var/www/server/releases; then echo "Directory does not exist '/var/www/server/releases'" 1>&2; false; fi
+ DEBUG [c7aa2f4e] Finished in 1.242 seconds with exit status 0 (successful).
+  INFO [1c1ec88e] Running /usr/bin/env echo "Branch develop (at 19eaafcca86213a9cb92a802259740125c899bca) deployed as release 20191214014527 by iw-jay" >> /var/www/server/revisions.log as ubuntu@13.234.82.187
+ DEBUG [1c1ec88e] Command: cd /var/www/server/releases && /usr/bin/env echo "Branch develop (at 19eaafcca86213a9cb92a802259740125c899bca) deployed as release 20191214014527 by iw-jay" >> /var/www/server/revisions.log
+  INFO [1c1ec88e] Finished in 1.104 seconds with exit status 0 (successful).
